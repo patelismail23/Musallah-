@@ -1,0 +1,11 @@
+from django.contrib import admin
+
+# Register your models here.
+
+
+from django.apps import apps
+
+app = apps.get_app_config('musallahapp')
+
+for model.name , model in apps.model.items():
+	admin.site.register(model)
